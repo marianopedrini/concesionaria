@@ -12,6 +12,11 @@ let concesionaria = {
     encontrado.vendido = true;
     return this.buscarAuto(patente);
   },
+
+  autosParaLaVenta: function () {
+    let sinVender = autos.filter((auto) => auto.vendido == false);
+    return sinVender;
+  },
 };
 
-console.log(concesionaria.venderAuto("APL123"));
+console.log(concesionaria.autosParaLaVenta());
