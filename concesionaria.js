@@ -23,6 +23,13 @@ let concesionaria = {
     let autos0km = autosVendibles.filter((auto) => auto.km < 100);
     return autos0km;
   },
+
+  listaDeVentas: function () {
+    let lista = [];
+    let autosVendidos = autos.filter((auto) => auto.vendido == true);
+    autosVendidos.forEach((auto) => lista.push(auto.precio));
+    return lista;
+  },
 };
 
-console.log(concesionaria.autos0km());
+console.log(concesionaria.listaDeVentas());
