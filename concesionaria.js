@@ -42,6 +42,15 @@ let concesionaria = {
       return 0;
     }
   },
+
+  puedeComprar: function (auto, persona) {
+    let precioAuto = auto.precio;
+    let cuotasAuto = precioAuto / auto.cuotas;
+    return (
+      precioAuto < persona.capacidadDePagoTotal &&
+      cuotasAuto < persona.capacidadDePagoEnCuotas
+    );
+  },
 };
 
-console.log(concesionaria.totalDeVentas());
+console.log(concesionaria.puedeComprar());
