@@ -30,6 +30,18 @@ let concesionaria = {
     autosVendidos.forEach((auto) => lista.push(auto.precio));
     return lista;
   },
+
+  totalDeVentas: function () {
+    let lista = this.listaDeVentas();
+    if (lista != 0) {
+      let ventas = lista.reduce(function (acum, precio) {
+        return acum + precio;
+      });
+      return ventas;
+    } else {
+      return 0;
+    }
+  },
 };
 
-console.log(concesionaria.listaDeVentas());
+console.log(concesionaria.totalDeVentas());
