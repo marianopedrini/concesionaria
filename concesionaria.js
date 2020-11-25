@@ -17,6 +17,12 @@ let concesionaria = {
     let sinVender = autos.filter((auto) => auto.vendido == false);
     return sinVender;
   },
+
+  autos0KM: function () {
+    let autosVendibles = this.autosParaLaVenta();
+    let autos0km = autosVendibles.filter((auto) => auto.km < 100);
+    return autos0km;
+  },
 };
 
-console.log(concesionaria.autosParaLaVenta());
+console.log(concesionaria.autos0km());
