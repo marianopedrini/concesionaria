@@ -51,6 +51,9 @@ let concesionaria = {
       cuotasAuto < persona.capacidadDePagoEnCuotas
     );
   },
-};
 
-console.log(concesionaria.puedeComprar());
+  autosQuePuedeComprar: function (persona) {
+    let listado = [];
+    let autoAccesible = autos.forEach();
+  },
+};
