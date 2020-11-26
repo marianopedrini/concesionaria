@@ -53,7 +53,7 @@ let concesionaria = {
   },
 
   autosQuePuedeComprar: function (persona) {
-    let listado = [];
-    let autoAccesible = autos.forEach();
+    let listadoAutos = autos.filter((auto) => this.puedeComprar(auto, persona));
+    return listadoAutos;
   },
 };
