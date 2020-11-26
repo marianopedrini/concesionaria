@@ -53,6 +53,7 @@ let concesionaria = {
   },
 
   autosQuePuedeComprar: function (persona) {
+    //podría ser el return solo sin crear la variable listadoAutos
     let listadoAutos = autos.filter((auto) => this.puedeComprar(auto, persona));
     return listadoAutos;
   },
